@@ -1,0 +1,107 @@
+/* ── Global ─────────────────────────────────────────────────── */
+:root {
+  --chuck-red:    #c0392b;
+  --chuck-dark:   #1a1a2e;
+  --chuck-mid:    #16213e;
+  --chuck-accent: #e94560;
+  --chuck-text:   #f0f0f0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background-color: var(--chuck-dark);
+  color: var(--chuck-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+.site-header {
+  background: linear-gradient(135deg, var(--chuck-mid) 0%, var(--chuck-red) 100%);
+  text-align: center;
+  padding: 2.5rem 1rem 2rem;
+  border-bottom: 3px solid var(--chuck-accent);
+}
+
+.header-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid var(--chuck-accent);
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
+}
+
+.site-header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.25rem;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.tagline {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin: 0;
+  font-style: italic;
+}
+
+/* ── Card ───────────────────────────────────────────────────── */
+.chuck-card {
+  background-color: var(--chuck-mid);
+  border: 1px solid rgba(233, 69, 96, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  color: var(--chuck-text);
+}
+
+.chuck-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(233, 69, 96, 0.35) !important;
+}
+
+.chuck-card__img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid var(--chuck-accent);
+  filter: grayscale(20%);
+  transition: filter 0.25s ease;
+}
+
+.chuck-card:hover .chuck-card__img {
+  filter: grayscale(0%);
+}
+
+.chuck-card .card-body {
+  padding: 1.25rem;
+}
+
+.chuck-card .card-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d0d0d0;
+}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.site-footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1.25rem;
+  background-color: var(--chuck-mid);
+  border-top: 1px solid rgba(233, 69, 96, 0.3);
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
